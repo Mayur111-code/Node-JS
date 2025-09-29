@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href=""
+      rel="stylesheet"
+    />
+    <title>student</title>
+    <style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9f9f9;
+  }
+
+  header {
+    background-color: #0077b6;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+  }
+
+  .card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 280px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+
+  .card:hover {
+    transform: scale(1.02);
+  }
+
+  .card h2 {
+    margin-top: 0;
+    color: #023e8a;
+  }
+
+  .card p {
+    margin: 8px 0;
+    color: #333;
+  }
+
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    margin-top: 40px;
+  }
+</style>
+  </head>
+  <body>
+   <header>
+    <%- include('header')%>
+   </header>
+   <hero>
+     <% students.map(student => { %>
+    <div class="card">
+      <h2><%= student.name %></h2>
+      <p><strong>Roll No:</strong> <%= student.rollNo %></p>
+      <p><strong>Course:</strong> <%= student.course %></p>
+      <p><strong>Batch:</strong> <%= student.batch %></p>
+    </div>
+  <% }) %>
+   </hero>
+   <section>
+    <footer>
+        <%- include('footer')%>
+    </footer>
+   </section>
+  </body>
+</html>
