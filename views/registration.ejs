@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f6fa;
+      font-family: 'Poppins', sans-serif;
+    }
+    .registration-form {
+      max-width: 600px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      margin: 40px auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-weight: 600;
+      color: #333;
+    }
+    .btn-custom {
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="registration-form">
+
+    <a href="/studentdata" style="text-decoration:none;">
+  <button type="button" class="btn btn-success mb-3">📄 View Student Data</button>
+</a>
+
+
+    <h2>Student Registration Form</h2>
+    <form action="/saveform" method="post">
+
+      <div class="mb-3">
+        <label for="FullName" class="form-label">Full Name</label>
+        <input type="text" class="form-control" id="FullName" name="FullName" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="Email" name="Email" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="ContactNumber" class="form-label">Contact Number</label>
+        <input type="tel" class="form-control" id="ContactNumber" name="ContactNumber" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="Course" class="form-label">Course</label>
+        <input type="text" class="form-control" id="Course" name="Course" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="BatchCode" class="form-label">Batch Code</label>
+        <input type="text" class="form-control" id="BatchCode" name="BatchCode" required>
+      </div>
+
+      
+
+      <div class="mb-3">
+        <label for="Remarks" class="form-label">Remarks</label>
+        <textarea class="form-control" id="Remarks" name="Remarks" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-custom">Submit</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
